@@ -21,6 +21,11 @@ foreach ($files as $file) {
 
 				break;
 
+			/*handle errors*/
+			default:
+				error(no_files_matched);
+				break;
+
 		}
 
 	}

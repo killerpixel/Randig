@@ -2,6 +2,7 @@
 
 function generate_content(){
 
+	/*decide layout type*/
 	global $layout_type;
 	switch($layout_type){
 		case 'sections':	generate_sections(); break;
