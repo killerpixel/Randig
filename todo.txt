@@ -3,8 +3,9 @@
 *styling ci...
 *content dir gitignore
 
-*modules auslagern nach root
-*switches for modules instead of ifs
-*use module names in block classes
+
 *numbering for blocks
+
 *call blocks boxes
+*switches for modules instead of ifs
+*modules auslagern nach root

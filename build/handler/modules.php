@@ -16,7 +16,7 @@ function parse_modules($blocks){
 			$files = array_diff(scandir('./'.$content), array('..', '.'));
 
 			/*create block*/
-			echo '<div class="block">'.PHP_EOL;
+			echo '<div class="block '.$name.'">'.PHP_EOL;
 
 				/*include module handler*/
 				include './build/modules/'.$name.'.php';
