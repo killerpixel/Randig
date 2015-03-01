@@ -9,6 +9,7 @@ function parse_modules($boxes){
 			$name = strip_numbering($box);
 
 			/*provide global vars*/
+			global $count;
 			global $subdir;
 			$content = $subdir.'/'.$box;
 
@@ -16,13 +17,16 @@ function parse_modules($boxes){
 			$files = array_diff(scandir('./'.$content), array('..', '.'));
 
 			/*create block*/
-			echo '<div class="box '.$name.'">'.PHP_EOL;
+			echo '<div class="box box'.$count.' '.$name.'">'.PHP_EOL;
 
 				/*include module handler*/
 				include './build/modules/'.$name.'.php';
 
 			/*close block*/
 			echo PHP_EOL.'</div>'.PHP_EOL;
+
+			/*count boxes*/
+			$count++;
 
 		}
 

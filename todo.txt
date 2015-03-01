@@ -1,8 +1,0 @@
-*naming
-*rewriting issues äöü etc
-*styling ci...
-*content dir gitignore
-
-
-*numbering for blocks
-*modules auslagern nach root

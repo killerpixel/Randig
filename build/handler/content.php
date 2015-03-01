@@ -1,5 +1,8 @@
 <?
 
+/*init box counter*/
+$count = 1;
+
 function generate_content(){
 
 	/*decide layout type*/
