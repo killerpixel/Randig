@@ -34,7 +34,7 @@ generate_navigation();
 
 
 /*rail*/
-echo '<div class="content rail">';
+echo '<div class="content">';
 
 
 /*generate content*/

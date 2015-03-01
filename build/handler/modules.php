@@ -15,11 +15,14 @@ function parse_modules($blocks){
 			/*provide subfiles*/
 			$files = array_diff(scandir('./'.$content), array('..', '.'));
 
-			/*include module handler*/
-			include './build/modules/'.$name.'.php';
+			/*create block*/
+			echo '<div class="block">';
 
-			/*break*/
-			echo '<br/>'.PHP_EOL;
+				/*include module handler*/
+				include './build/modules/'.$name.'.php';
+
+			/*close block*/
+			echo '</div>'.PHP_EOL;
 
 		}
 
