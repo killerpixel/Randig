@@ -52,6 +52,10 @@ function generate_sections(){
 			$subdirs = $basedir.'/'.$section;
 			$modules = array_diff(scandir('./'.$subdirs), array('..', '.'));
 
+			/*provide subdir path*/
+			global $subdir;
+			$subdir = $subdirs;
+
 			/*parse modules*/
 			parse_modules(sort_names($modules));
 

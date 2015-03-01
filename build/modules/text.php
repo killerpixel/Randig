@@ -1,14 +1,5 @@
 <?php
 
-
-
-
-echo '<br>doesnt work with sections<br><br>';
-
-
-
-
-
 /*handle file contents*/
 foreach ($files as $file) {
 
