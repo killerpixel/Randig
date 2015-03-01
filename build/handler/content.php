@@ -42,10 +42,10 @@ function generate_sections(){
 		if(substr($branch,0,1) != '.'){
 
 			/*print section box*/
-			echo '<div class="'.strip_numbering($section).'">';
+			echo '<div class="'.strip_numbering($section).'">'.PHP_EOL;
 
 			/*create section anchor*/
-			echo '<a name="'.strip_numbering($section).'"></a>';
+			echo '<a name="'.strip_numbering($section).'"></a>'.PHP_EOL;
 
 			/*gather requested blocks*/
 			global $basedir;
@@ -60,7 +60,7 @@ function generate_sections(){
 			parse_modules(sort_names($modules));
 
 			/*close section box*/
-			echo '<div class="'.strip_numbering($section).'">';
+			echo '</div>'.PHP_EOL;
 
 		}
 

@@ -1,7 +1,10 @@
-*basic modules
-*modules auslagern nach root
-*github
 *naming
 *rewriting issues äöü etc
 *styling ci...
+*content dir gitignore
 
+*modules auslagern nach root
+*switches for modules instead of ifs
+*use module names in block classes
+*numbering for blocks
+*call blocks boxes

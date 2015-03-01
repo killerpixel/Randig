@@ -34,7 +34,7 @@ generate_navigation();
 
 
 /*rail*/
-echo '<div class="content">';
+echo '<div class="content">'.PHP_EOL;
 
 
 /*generate content*/
@@ -42,7 +42,7 @@ generate_content();
 
 
 /*/rail*/
-echo '</div>';
+echo '</div>'.PHP_EOL;
 
 
 /*include foot*/
