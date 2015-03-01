@@ -10,18 +10,6 @@ foreach ($files as $file) {
 		$type = pathinfo($file, PATHINFO_EXTENSION);
 		switch ($type){
 
-			/*handle image*/
-			case 'jpg':
-
-				/*get file data*/
-				$filename = $content.'/'.$file;
-
-				/*print*/
-				echo '<img src="'.$filename.'" />';
-
-				break;
-
-
 			/*handle text*/
 			case 'txt':
 
@@ -33,6 +21,17 @@ foreach ($files as $file) {
 
 				/*print*/
 				echo $text;
+
+				break;
+
+			/*handle image*/
+			case 'jpg' || 'png' || 'gif':
+
+				/*get file data*/
+				$filename = $content.'/'.$file;
+
+				/*print*/
+				echo '<img src="'.$filename.'" />';
 
 				break;
 

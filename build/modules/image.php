@@ -11,7 +11,7 @@ foreach ($files as $file) {
 		switch ($type){
 
 			/*handle image*/
-			case 'jpg':
+			case 'jpg' || 'png' || 'gif':
 
 				/*get file data*/
 				$filename = $content.'/'.$file;
