@@ -8,13 +8,18 @@ foreach ($files as $file) {
 
 		/*get filetype*/
 		$type = pathinfo($file, PATHINFO_EXTENSION);
-		if ($type == 'jpg'){
+		switch ($type){
 
-			/*get file data*/
-			$filename = $content.'/'.$file;
+			/*handle image*/
+			case 'jpg':
 
-			/*print*/
-			echo '<img src="'.$filename.'" />';
+				/*get file data*/
+				$filename = $content.'/'.$file;
+
+				/*print*/
+				echo '<img src="'.$filename.'" />';
+
+				break;
 
 		}
 

@@ -8,16 +8,20 @@ foreach ($files as $file) {
 
 		/*get filetype*/
 		$type = pathinfo($file, PATHINFO_EXTENSION);
-		if ($type == 'txt'){
+		switch ($type){
 
-			/*get text data*/
-			$filename = $content.'/'.$file;
-			$file_open = fopen($filename, 'r');
-			$text = fread($file_open,filesize($filename));
-			fclose($file_open);
+			case 'txt':
 
-			/*print*/
-			echo $text;
+				/*get text data*/
+				$filename = $content.'/'.$file;
+				$file_open = fopen($filename, 'r');
+				$text = fread($file_open,filesize($filename));
+				fclose($file_open);
+
+				/*print*/
+				echo $text;
+
+				break;
 
 		}
 
