@@ -49,7 +49,7 @@ function generate_sections(){
 			echo '<div class="'.strip_numbering($section).'">'.PHP_EOL;
 
 			/*create section anchor*/
-			echo '<a name="'.strip_numbering($section).'"></a>'.PHP_EOL;
+			echo '<a name="'.plain_name(strip_numbering($section)).'"></a>'.PHP_EOL;
 
 			/*gather requested blocks*/
 			global $basedir;
