@@ -19,11 +19,11 @@ function generate_navigation(){
 			switch($layout_type){
 
 				case 'sections':
-				$navigation .= '<li><a href="#'.strip_numbering($branch).'">'.strip_numbering($branch).'</a></li>'.PHP_EOL;
+				$navigation .= '<li><a href="#'.plain_name(strip_numbering($branch)).'">'.strip_numbering($branch).'</a></li>'.PHP_EOL;
 				break;
 
 				case 'pages':
-				$navigation .= '<li><a href="'.strip_numbering($branch).'">'.strip_numbering($branch).'</a></li>'.PHP_EOL;
+				$navigation .= '<li><a href="'.plain_name(strip_numbering($branch)).'">'.strip_numbering($branch).'</a></li>'.PHP_EOL;
 				break;
 
 				default:

@@ -77,20 +77,19 @@ function full_dirname($match){
 	$dirs = array_diff(scandir($basedir), array('..', '.'));
 
 	foreach ($dirs as $dir) {
-
 		if (stripos(plain_name($dir), plain_name($match))){
 			return $dir;
 		}
 	}
-
 }
 
 
 /*level encoding if different*/
 function plain_name($input){
 
-	$umlauts = 		array('ä','Ä','ö','Ö','ü','Ü','ß','ü');
-	$non_umlauts = 	array('a','A','o','O','u','U','ss','u');
+	$input = 		urlencode($input);
+	$umlauts = 		array('%C3%A4','a%CC%88','%C3%B6','o%CC%88','%C3%BC','u%CC%88','%C3%84','A%CC%88','%C3%96','O%CC%88','%C3%9C','U%CC%88','%C3%9F','+');
+	$non_umlauts = 	array('ae','ae','oe','oe','ue','ue','Ae','Ae','Oe','Oe','Ue','Ue','ss','-');
 	return str_replace($umlauts, $non_umlauts, $input);
 
 }
