@@ -61,24 +61,20 @@ textarea {
   -webkit-appearance: none;
   border-radius: 0;
 }
-.rail {
+.content {
   position: relative;
   display: block;
   width: 100%;
-  max-width: 1250px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 20px;
+  padding: 0;
 }
-.content .container {
+.content .box {
   position: relative;
   display: inline-block;
   vertical-align: top;
   width: 100% !important;
-  padding: 0 25px;
+  padding: 0;
   margin-bottom: 20px;
-  background: #f1f1f1;
-}
-.container.wide {
-  width: 100% !important;
 }

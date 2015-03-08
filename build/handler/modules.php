@@ -1,25 +1,32 @@
 <?
 
-function parse_modules($blocks){
+function parse_modules($boxes){
 
-	foreach ($blocks as $block) {
-		if(substr($block,0,1) != '.'){
+	foreach ($boxes as $box) {
+		if(substr($box,0,1) != '.'){
 
 			/*read module name*/
-			$name = strip_numbering($block);
+			$name = strip_numbering($box);
 
 			/*provide global vars*/
+			global $count;
 			global $subdir;
-			$content = $subdir.'/'.$block;
+			$content = $subdir.'/'.$box;
 
 			/*provide subfiles*/
 			$files = array_diff(scandir('./'.$content), array('..', '.'));
 
-			/*include module handler*/
-			include './build/modules/'.$name.'.php';
+			/*create block*/
+			echo '<div class="box box'.$count.' '.$name.'">'.PHP_EOL;
 
-			/*break*/
-			echo '<br/>'.PHP_EOL;
+				/*include module handler*/
+				include './build/modules/'.$name.'.php';
+
+			/*close block*/
+			echo PHP_EOL.'</div>'.PHP_EOL;
+
+			/*count boxes*/
+			$count++;
 
 		}
 

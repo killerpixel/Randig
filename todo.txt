@@ -1,7 +1,0 @@
-*basic modules
-*modules auslagern nach root
-*github
-*naming
-*rewriting issues äöü etc
-*styling ci...
-

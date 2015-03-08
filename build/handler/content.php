@@ -1,7 +1,11 @@
 <?
 
+/*init box counter*/
+$count = 1;
+
 function generate_content(){
 
+	/*decide layout type*/
 	global $layout_type;
 	switch($layout_type){
 		case 'sections':	generate_sections(); break;
@@ -42,21 +46,25 @@ function generate_sections(){
 		if(substr($branch,0,1) != '.'){
 
 			/*print section box*/
-			echo '<div class="'.strip_numbering($section).'">';
+			echo '<div class="'.strip_numbering($section).'">'.PHP_EOL;
 
 			/*create section anchor*/
-			echo '<a name="'.strip_numbering($section).'"></a>';
+			echo '<a name="'.plain_name(strip_numbering($section)).'"></a>'.PHP_EOL;
 
 			/*gather requested blocks*/
 			global $basedir;
 			$subdirs = $basedir.'/'.$section;
 			$modules = array_diff(scandir('./'.$subdirs), array('..', '.'));
 
+			/*provide subdir path*/
+			global $subdir;
+			$subdir = $subdirs;
+
 			/*parse modules*/
 			parse_modules(sort_names($modules));
 
 			/*close section box*/
-			echo '<div class="'.strip_numbering($section).'">';
+			echo '</div>'.PHP_EOL;
 
 		}
 
