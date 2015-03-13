@@ -1,9 +1,10 @@
 
 	<!-- smooth scroll -->
-	<script type="text/javascript" src="build/scripts/smoothscroll/smoothscroll.js"></script>
+	<script type="text/javascript" src="build/scripts/smoothscroll/randig.smoothscroll.js"></script>
 
-	<!-- accordion -->
-	<!--<script type="text/javascript" src="build/scripts/accordion/accordion.js"></script>-->
+	<?
+		/*add script watcher*/
+	?>
 
 </body>
 </html>
