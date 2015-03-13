@@ -10,19 +10,17 @@ foreach ($files as $file) {
 		$type = pathinfo($file, PATHINFO_EXTENSION);
 		switch ($type){
 
-			/*handle image*/
+			/*handle filetypes*/
 			case 'mp4':
+				$mp4 = $content.'/'.$file;
+				break;
 
-				/*get file data*/
-				$filename = $content.'/'.$file;
+			case 'ogg':
+				$ogg = $content.'/'.$file;
+				break;
 
-				/*print*/
-				echo '
-					<video controls>
-						<source src="'.$filename.'" type="video/mp4">
-					</video>
-				';
-
+			case 'jpg':
+				$jpg = $content.'/'.$file;
 				break;
 
 		}
@@ -30,5 +28,13 @@ foreach ($files as $file) {
 	}
 
 }
+
+/*print*/
+echo '
+	<video controls poster="'.$jpg.'">
+		<source src="'.$mp4.'" type="video/mp4">
+		<source src="'.$ogg.'" type="video/mp4">
+	</video>
+';
 
 ?>
