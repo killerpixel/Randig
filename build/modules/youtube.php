@@ -25,7 +25,7 @@ foreach ($files as $file) {
 		/*print*/
 		echo '
 			<div class="video">
-				<img class="spacer" src="'.$content.'/'.'ratio.png" />
+				<img class="spacer" src="build/images/ratio_16-9.png" />
 				<iframe width="1280" height="720" src="//www.youtube.com/embed/'.$code.'?rel=0" frameborder="0" allowfullscreen></iframe>
 			</div>
 		';
