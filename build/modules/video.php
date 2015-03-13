@@ -11,17 +11,9 @@ foreach ($files as $file) {
 		switch ($type){
 
 			/*handle filetypes*/
-			case 'mp4':
-				$mp4 = $content.'/'.$file;
-				break;
-
-			case 'ogg':
-				$ogg = $content.'/'.$file;
-				break;
-
-			case 'jpg':
-				$jpg = $content.'/'.$file;
-				break;
+			case 'mp4':		$mp4 = $content.'/'.$file;		break;
+			case 'ogg':		$ogg = $content.'/'.$file;		break;
+			case 'jpg':		$jpg = $content.'/'.$file;		break;
 
 		}
 
